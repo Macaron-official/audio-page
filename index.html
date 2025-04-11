@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <title>音频播放页面</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>音频预览 - a.m4a</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2em;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    audio, video {
+      margin: 1em 0;
+      max-width: 100%;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>音频播放</h1>
+  <h1>🎧 音频播放器</h1>
+
+  <h3>方式一：Audio 标签</h3>
   <audio controls>
     <source src="a.m4a" type="audio/mp4">
-    Your browser does not support the audio tag.
+    您的浏览器不支持 audio 标签。
   </audio>
+
+  <h3>方式二：Video 标签播放音频</h3>
+  <video controls width="300">
+    <source src="a.m4a" type="audio/mp4">
+    您的浏览器不支持 video 标签。
+  </video>
+
+  <h3>方式三：直接下载</h3>
+  <p>
+    <a href="a.m4a" target="_blank">🔗 点击下载 a.m4a</a>
+  </p>
 </body>
 </html>
